@@ -19,7 +19,7 @@ const Header = () => {
             <Link to="/">
                 <div className='logo'>Movie App</div>
             </Link>
-            <div>
+            <div className='search-bar'>
                 <form onSubmit={handleSubmit}>
                     <input type="text" placeholder='Search Movies & Series' value={term} onChange={(e) => setTerm(e.target.value)} />
                     <button type='submit'>Search</button>
