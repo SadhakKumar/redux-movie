@@ -1,13 +1,13 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async () => {
-    const response = await axios(`https://www.omdbapi.com/?apikey=50a3a0a9&s=Harry&type=movie`)
+export const fetchAsyncMovies = createAsyncThunk('movies/fetchAsyncMovies', async (term) => {
+    const response = await axios(`https://www.omdbapi.com/?apikey=50a3a0a9&s=${term}&type=movie`)
 
     return response.data;
 })
-export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async () => {
-    const response = await axios(`https://www.omdbapi.com/?apikey=50a3a0a9&s=Friends&type=series`)
+export const fetchAsyncShows = createAsyncThunk('movies/fetchAsyncShows', async (term) => {
+    const response = await axios(`https://www.omdbapi.com/?apikey=50a3a0a9&s=${term}&type=series`)
 
     return response.data;
 })

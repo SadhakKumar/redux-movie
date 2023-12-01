@@ -26,9 +26,10 @@ function Home() {
         //     dispatch(addMovies(response.data))
         // }
         // fetchMpvies();
-
-        dispatch(fetchAsyncMovies());
-        dispatch(fetchAsyncShows());
+        let movie = "Harry"
+        let series = "Friends"
+        dispatch(fetchAsyncMovies(movie));
+        dispatch(fetchAsyncShows(series));
 
     }, [dispatch])
     return (
